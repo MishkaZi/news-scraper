@@ -1,0 +1,20 @@
+{
+  "name": "scraper-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A bot to scrape news from stocks markets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Michael Zino",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
