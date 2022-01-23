@@ -29,6 +29,7 @@ bot.on('message', async (msg) => {
     if (text === '/start') {
       function getNews() {
         console.log('tick');
+        // News Wire ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         axios(newsWireURL)
           .then((res) => {
@@ -58,6 +59,30 @@ bot.on('message', async (msg) => {
           .catch((error) => {
             console.log(error);
           });
+        // // OTC Market ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // axios(otcMarketsURL)
+        //   .then((res) => {
+        //     const html = res.data;
+        //     const $ = cheerio.load(html);
+        //     console.log(html);
+
+        //     const titleOfArticle = $('._1N_-1HEdLn', html).first().attr('href');
+        //     // const linkToArticle =
+        //     //   'https://www.newswire.com/' +
+        //     //   $('.content-link', html).first().attr('href');
+        //     console.log(titleOfArticle);
+        //     // if (latestArticle.title != titleOfArticle) {
+        //     //   latestArticle = { title: titleOfArticle, url: linkToArticle };
+        //     //   console.log(latestArticle);
+
+        //     //   if (latestArticle !== {}) {
+        //     //     bot.sendMessage(chatId, latestArticle.title + `\n` + latestArticle.url);
+        //     //   }
+        //     // }
+        //   })
+        //   .catch((error) => {
+        //     console.log(error);
+        //   });
       }
 
       setInterval(getNews, 60000);
